@@ -2,7 +2,6 @@
 import { useDarkMode } from "@vuepress/theme-default/lib/client/composables/index.js";
 
 import { useI18NStr } from "../composables/useI18N";
-import "add-to-calendar-button";
 
 const darkMode = useDarkMode();
 const get_i18n_str = useI18NStr();

@@ -15,7 +15,7 @@ const frontmatter = usePageFrontmatter();
             {{ get_i18n_str(frontmatter.locale, "onboarding-title", "Welcome.") }}
           </h1>
           <p class="hero-body-text">
-            {{ get_i18n_str(frontmatter.locale, "onboarding-desc", "A curated collection of developer guides & more to build on the Permaweb. All in one place.") }}
+            {{ get_i18n_str(frontmatter.locale, "onboarding-desc", "The list of guides from the Node I'm running.") }}
           </p>
           <I18NRouterLink
             style="color: var(--c-accent-rose)"
@@ -39,19 +39,16 @@ const frontmatter = usePageFrontmatter();
         <div style="text-align: center; margin-top: 60px; opacity: 0.1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="128.000000pt"
-            height="149.000000pt"
-            viewBox="0 0 128.000000 149.000000"
-            preserveAspectRatio="xMidYMid meet"
+            width="170.667"
+            height="198.667"
+            viewBox="0 0 128 149"
+            fill="none"
           >
-            <g
-                transform="translate(0.000000,149.000000) scale(0.100000,-0.100000)"
-                fill="#000000"
-                stroke="none"
-             >
-                <path d="M0 745 l0 -745 640 0 640 0 0 745 0 745 -640 0 -640 0 0 -745z m897 674 c43 -22 86 -50 97 -62 46 -54 -8 -258 -158 -607 -42 -96 -76 -179 -76 -183 0 -5 10 -17 22 -26 30 -25 18 -48 -29 -56 -39 -6 -39 -7 -96 -132 -32 -70 -55 -131 -52 -137 2 -6 10 -18 17 -27 16 -23 -14 -69 -44 -69 -31 0 -178 99 -178 119 0 22 29 62 43 60 31 -4 41 7 78 87 60 133 63 121 -43 184 -117 70 -132 93 -124 200 13 189 164 481 317 614 42 37 111 75 136 76 7 0 47 -18 90 -41z" />
-                <path d="M778 1252 c-148 -153 -278 -425 -278 -582 0 -57 5 -63 35 -44 13 8 40 16 62 17 l38 3 58 134 c110 257 194 540 160 540 -5 0 -39 -30 -75 -68z" />
-            </g>
+          <!-- Menambahkan elemen linearGradient -->
+          <linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="100%" style="stop-color: red" />
+          </linearGradient>
+            <path d="M75.5 4.9C58.4 12.9 37 48.6 35.4 72c-.8 10.7.7 13 12.4 20 10.6 6.3 10.3 5.1 4.3 18.4-3.7 8-4.7 9.1-7.8 8.7-1.4-.2-4.3 3.8-4.3 6 0 2 14.7 11.9 17.8 11.9 3 0 6-4.6 4.4-6.9-.7-.9-1.5-2.1-1.7-2.7-.3-.6 2-6.7 5.2-13.7 5.7-12.5 5.7-12.6 9.6-13.2 4.7-.8 5.9-3.1 2.9-5.6C77 94 76 92.8 76 92.3c0-.4 3.4-8.7 7.6-18.3 15-34.9 20.4-55.3 15.8-60.7C97.4 11 82.8 3 80.7 3c-.7 0-3 .9-5.2 1.9zm10.2 17.6C85 29.4 76.9 53.3 69.3 71l-5.8 13.4-3.8.3c-2.2.1-4.9.9-6.2 1.7-3 1.9-3.5 1.3-3.5-4.4 0-10.7 7.3-30 17-45 4.4-6.6 16.6-20 18.3-20 .6 0 .8 2.2.4 5.5z" fill="url(#Gradient)" />
           </svg>
         </div>
       </div>
@@ -625,20 +622,12 @@ const frontmatter = usePageFrontmatter();
       animation: gradientAnimation 20s infinite linear;
       background: linear-gradient(
           90deg,
-          hsla(263, 93%, 69%, 1),
-          hsla(282, 57%, 64%, 1),
-          hsla(325, 55%, 66%, 1),
-          hsla(0, 92%, 75%, 1),
-          hsla(16, 65%, 78%, 1),
-          hsla(32, 50%, 80%, 1),
-          hsla(16, 65%, 78%, 1),
-          hsla(0, 92%, 75%, 1),
-          hsla(325, 55%, 66%, 1),
-          hsla(282, 57%, 64%, 1),
-          hsla(263, 93%, 69%, 1)
-        )
-        0 0 / 400% 100%;
-
+          hsla(160, 100%, 50%, 1), /* Aqua */
+          hsla(300, 100%, 50%, 1), /* Pink */
+          hsla(120, 100%, 50%, 1), /* Hijau */
+          hsla(300, 100%, 50%, 1), /* Pink */
+          hsla(270, 100%, 50%, 1)  /* Ungu */
+      ) 0 0 / 300% 100%;
       @keyframes gradientAnimation {
         to {
           background-position: 400% 0;

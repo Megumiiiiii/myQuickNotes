@@ -4,7 +4,7 @@ export const useContributors = () => {
   const contributors = ref([]);
 
   fetch(
-    'https://api.github.com/repos/Megumiiiiii/ar-node/contributors?q=contributions&order=desc'
+    'https://api.github.com/repos/Megumiiiiii/docs-megumii/contributors?q=contributions&order=desc'
   )
     .then((res) => {
       if (res.ok) return res.json();
