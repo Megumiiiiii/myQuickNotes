@@ -1,0 +1,29 @@
+name: publish cookbook
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+      - run: cd docs && yarn
+      - run: cd docs && yarn deploy
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SPECIAL_ACCESS_TOKEN: ${{ secrets.SPECIAL_ACCESS_TOKEN }}
+          COOKBOOK: ${{ secrets.COOKBOOK }}
+      - uses: Ilshidur/action-discord@master
+        name: Discord Notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed."
