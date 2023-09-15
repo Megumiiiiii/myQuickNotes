@@ -1,30 +1,24 @@
----
-locale: id
----
-
 # Vite Starter Kit
 
-## Panduan Memulai
+This guide will walk you through in a step by step flow to configure your development environment to build and deploy a permaweb react application.
 
-Panduan ini akan membimbing Anda langkah demi langkah untuk mengonfigurasi lingkungan pengembangan Anda agar dapat membangun dan mendeploy aplikasi React di permaweb.
+## Prerequisites
 
-## Persyaratan
+- Basic Typescript Knowledge (Not Mandatory) - [https://www.typescriptlang.org/docs/](Learn Typescript)
+- NodeJS v16.15.0 or greater - [https://nodejs.org/en/download/](Download NodeJS)
+- Knowledge of ReactJS - [https://reactjs.org/](Learn ReactJS)
+- Know git and common terminal commands
 
-- Pengetahuan Dasar TypeScript (Tidak Wajib) - [Pelajari TypeScript](https://www.typescriptlang.org/docs/)
-- NodeJS v16.15.0 atau lebih baru - [Unduh NodeJS](https://nodejs.org/en/download/)
-- Pengetahuan tentang ReactJS - [Pelajari ReactJS](https://reactjs.org/)
-- Mengetahui git dan perintah terminal umum
-
-## Dependensi Pengembangan
+## Development Dependencies
 
 - TypeScript
-- NPM atau Yarn Package Manager
+- NPM or Yarn Package Manager
 
-## Langkah-langkah
+## Steps
 
-### Buat Proyek
+### Create Project
 
-Jika Anda tidak familiar dengan TypeScript, Anda dapat menggunakan template "react" (`--template react`)
+if you are not familiar with typescript you can use the template "react" (`--template react`)
 
 <CodeGroup>
   <CodeGroupItem title="NPM">
@@ -43,16 +37,16 @@ yarn create vite my-arweave-app --template react-ts
   </CodeGroupItem>
 </CodeGroup>
 
-### Pindah ke Direktori Proyek
+### Change into the Project Directory
 
 ```sh
 cd my-arweave-app
 ```
 
 
-### Instalasi react-router-dom
+### Install react-router-dom
 
-Anda harus menginstal paket ini untuk mengelola routing antara halaman yang berbeda.
+You have to install this package to manage routing between different pages
 
 <CodeGroup>
   <CodeGroupItem title="NPM">
@@ -72,9 +66,9 @@ yarn add react-router-dom -D
 </CodeGroup>
 
 
-### Menjalankan Aplikasi
+### Run the App
 
-Sekarang kita perlu memeriksa apakah semuanya berjalan dengan sempurna sebelum melangkah ke langkah berikutnya, jalankan
+Now we need to check if everything is going Perfect before jumping into next Step, Run
 <CodeGroup>
 <CodeGroupItem title="NPM">
 
@@ -91,13 +85,13 @@ yarn dev
 
   </CodeGroupItem>
 </CodeGroup>
-Ini akan memulai server pengembangan baru secara lokal di mesin Anda. Secara default, ia menggunakan `PORT 3000`, jika PORT ini sudah digunakan,
-mungkin akan meminta Anda untuk beralih ke PORT lain yang tersedia di Terminal.
+it will start a new development server locally on your machine by default it uses `PORT 3000` if this PORT is already in use
+it may ask you to switch to another available PORT in Terminal
 
 
-### Pengaturan tipe wallet
+### Setup wallet types
 
-Jika Anda ingin menggunakan [ArConnect](https://arconnect.io), [Arweave.app](https://arweave.app), atau dompet berbasis browser lainnya, Anda dapat menginstal paket tipe ArConnect untuk mendapatkan deklarasi untuk `window.arweaveWallet`.
+If you want to use [ArConnect](https://arconnect.io), [Arweave.app](https://arweave.app) or other browser-based wallets, you can install ArConnect's types package to have declarations for `window.arweaveWallet`.
 <CodeGroup>
 <CodeGroupItem title="NPM">
 
@@ -115,15 +109,15 @@ yarn add arconnect -D
   </CodeGroupItem>
 </CodeGroup>
 
-Setelah menginstal paket, Anda perlu menambahkannya ke file `src/vite-env.d.ts` Anda.
+After installing the package, you'll need to add it to your `src/vite-env.d.ts` file.
 
 ```ts
 /// <reference types="arconnect" />
 ```
 
-### Pengaturan Routing
+### Setup Routing
 
-Sekarang, modifikasi aplikasinya dan tambahkan rute baru seperti halaman "about", pertama-tama buat 2 file .tsx lagi. (jika Anda menggunakan template React JS biasa, pastikan ekstensi file komponen Anda adalah `.jsx atau .js`)
+Now modify the application and add a new routes such as an about page, first create 2 more .tsx files. (if you have used the vanilla JS react template, then make sure your component file extension should be `.jsx or .js`)
 
 ```sh
 touch src/HomePage.tsx
@@ -138,9 +132,9 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div>
-      Selamat datang di Permaweb!
+      Welcome to the Permaweb!
       <Link to={"/about/"}>
-        <div>Tentang</div>
+        <div>About</div>
       </Link>
     </div>
   );
@@ -157,9 +151,9 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div>
-      Selamat datang di halaman About!
+      Welcome to the About page!
       <Link to={"/"}>
-        <div>Beranda</div>
+        <div>Home</div>
       </Link>
     </div>
   );
@@ -168,9 +162,9 @@ function About() {
 export default About;
 ```
 
-#### Modifikasi App.tsx
+#### Modify App.tsx
 
-Kita perlu memperbarui App.tsx untuk mengelola halaman yang berbeda
+We need to update the App.tsx to manage different pages
 
 ```ts
 import { HashRouter } from "react-router-dom";
@@ -193,16 +187,17 @@ function App() {
 export default App;
 ```
 
-::: info Routing Hash
-Perhatikan bahwa kita membungkus rute dalam HashRouter dan menggunakan komponen Link react-router-dom untuk membangun tautan.
-Ini penting di permaweb dalam kondisinya saat ini, ini akan memastikan rute berfungsi dengan baik karena aplikasi disajikan di jalur seperti `https://[gateway]/[TX]`
+::: info Hash Routing
+Note that we are wrapping the routes in a HashRouter and using the react-router-dom Link component to build links.
+This is important on the permaweb in its current state, it will ensure the routes work properly because applications
+are served on a path like `https://[gateway]/[TX]`
 :::
 
-## Deploy Secara Permanen
+## Deploy Permanently
 
-### Membuat Wallet
+### Generate Wallet
 
-Kita membutuhkan paket `arweave` untuk membuat wallet
+We need the `arweave` package to generate a wallet
 
 <CodeGroup>
 <CodeGroupItem title="NPM">
@@ -221,15 +216,15 @@ yarn add arweave -D
   </CodeGroupItem>
 </CodeGroup>
 
-lalu jalankan perintah berikut di terminal
+then run this command in the terminal
 
 ```sh
 node -e "require('arweave').init({}).wallets.generate().then(JSON.stringify).then(console.log.bind(console))" > wallet.json
 ```
 
-### Pengaturan bundlr
+### Setup bundlr
 
-Kita memerlukan Bundlr untuk mendeploy aplikasi kita ke Permaweb karena ini menyediakan pengunggahan dan pengambilan data instan
+We need Bundlr to deploy our app to Permaweb it provides instant data upload and retrieval
 
 <CodeGroup>
   <CodeGroupItem title="NPM">
@@ -249,10 +244,10 @@ yarn global add @bundlr-network/client
 </CodeGroup>
 
 ::: info
-Anda perlu menambahkan AR ke wallet ini dan mendanai wallet bundlr Anda agar dapat mengunggah aplikasi ini. Lihat [https://bundlr.network](https://bundlr.network) dan [https://www.arweave.org/](https://www.arweave.org/) untuk informasi lebih lanjut.
+You will need to add AR to this wallet and fund your bundlr wallet to be able to upload this app. See [https://bundlr.network](https://bundlr.network) and [https://www.arweave.org/](https://www.arweave.org/) for more information.
 :::
 
-### Perbarui package.json
+### Update package.json
 
 ```json
 {
@@ -265,9 +260,9 @@ Anda perlu menambahkan AR ke wallet ini dan mendanai wallet bundlr Anda agar dap
 }
 ```
 
-### Jalankan build
+### Run build
 
-Sekarang saatnya untuk menghasilkan build
+Now its time to Generate Build
 
 <CodeGroup>
   <CodeGroupItem title="NPM">
@@ -286,8 +281,8 @@ yarn build
   </CodeGroupItem>
 </CodeGroup>
 
-### Jalankan deploy
-Akhirnya, kita siap untuk mendeploy Aplikasi Permaweb pertama kita
+### Run deploy
+Finally we are good to deploy our First Permaweb Application
 
 <CodeGroup>
   <CodeGroupItem title="NPM">
@@ -306,10 +301,10 @@ yarn deploy
   </CodeGroupItem>
 </CodeGroup>
 
-::: tip BERHASIL
-Sekarang Anda seharusnya memiliki Aplikasi React di Permaweb! Kerja bagus!
+::: tip SUCCESS
+You should now have a React Application on the Permaweb! Great Job!
 :::
 
-::: warning error
-Jika Anda menerima kesalahan ini `Not enough funds to send data`, Anda harus mendanai beberapa AR ke wallet Anda, dan kemudian mencoba mendeploynya lagi.
+::: error
+If you receive this error `Not enough funds to send data`, you have to fund some AR into your wallet, and then try to deploy it again.
 :::

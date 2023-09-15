@@ -2,7 +2,7 @@
 locale: id
 ---
 
-# AR
+title: 
 
 <div align="center">
 
@@ -12,6 +12,7 @@ locale: id
 
 <img align="top" src="https://komarev.com/ghpvc/?username=Megumiiiiii&color=e609e6&style=plastic&label=Visitors" height='35'/>
 
+# AR
 
 </div>
 

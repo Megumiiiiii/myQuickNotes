@@ -12,26 +12,6 @@ const getI18NSidebar = (langCode) => [
         text: get_i18n_str(langCode, "getting-started-welcome", "Welcome"),
         link: get_i18n_link(langCode, "/getting-started/welcome"),
       },
-      {
-        text: get_i18n_str(langCode, "getting-started-hw-no-code", "Hello World (No Code)"),
-        link: get_i18n_link(langCode, "/getting-started/quick-starts/hw-no-code"),
-      },
-      {
-        text: get_i18n_str(langCode, "getting-started-hw-cli", "Hello World (CLI)"),
-        link: get_i18n_link(langCode, "/getting-started/quick-starts/hw-cli"),
-      },
-      {
-        text: get_i18n_str(langCode, "getting-started-hw-code", "Hello World (With Code)"),
-        link: get_i18n_link(langCode, "/getting-started/quick-starts/hw-code"),
-      },
-      {
-        text: get_i18n_str(langCode, "getting-started-hw-node", "Hello World (Nodejs)"),
-        link: get_i18n_link(langCode, "/getting-started/quick-starts/hw-nodejs"),
-      },
-      {
-        text: get_i18n_str(langCode, "getting-started-contributing", "Contributing"),
-        link: get_i18n_link(langCode, "/getting-started/contributing"),
-      },
     ],
   },
   {
