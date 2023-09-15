@@ -36,6 +36,7 @@ const frontmatter = usePageFrontmatter();
       </div>
 
       <div class="col-12 order-3">
+      <!--
         <div style="text-align: center; margin-top: 60px; opacity: 0.1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,13 +45,14 @@ const frontmatter = usePageFrontmatter();
             viewBox="0 0 128 149"
             fill="none"
           >
-          <!-- Menambahkan elemen linearGradient -->
+         
           <linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="100%" style="stop-color: red" />
           </linearGradient>
             <path d="M75.5 4.9C58.4 12.9 37 48.6 35.4 72c-.8 10.7.7 13 12.4 20 10.6 6.3 10.3 5.1 4.3 18.4-3.7 8-4.7 9.1-7.8 8.7-1.4-.2-4.3 3.8-4.3 6 0 2 14.7 11.9 17.8 11.9 3 0 6-4.6 4.4-6.9-.7-.9-1.5-2.1-1.7-2.7-.3-.6 2-6.7 5.2-13.7 5.7-12.5 5.7-12.6 9.6-13.2 4.7-.8 5.9-3.1 2.9-5.6C77 94 76 92.8 76 92.3c0-.4 3.4-8.7 7.6-18.3 15-34.9 20.4-55.3 15.8-60.7C97.4 11 82.8 3 80.7 3c-.7 0-3 .9-5.2 1.9zm10.2 17.6C85 29.4 76.9 53.3 69.3 71l-5.8 13.4-3.8.3c-2.2.1-4.9.9-6.2 1.7-3 1.9-3.5 1.3-3.5-4.4 0-10.7 7.3-30 17-45 4.4-6.6 16.6-20 18.3-20 .6 0 .8 2.2.4 5.5z" fill="url(#Gradient)" />
           </svg>
         </div>
+        -->
       </div>
     </div>
 
@@ -177,7 +179,7 @@ const frontmatter = usePageFrontmatter();
           >
         </I18NRouterLink>
       </div>
-
+<!--
       <div class="col-12 col-md-6 col-xl-3">
         <I18NRouterLink to="/concepts" class="onboard-card">
           <div class="card-content">
@@ -293,7 +295,7 @@ const frontmatter = usePageFrontmatter();
           >
         </I18NRouterLink>
       </div>
-
+-->
       <div class="col-12 col-md-6 col-xl-3">
         <I18NRouterLink to="/guides" class="onboard-card">
           <div class="card-content">
@@ -430,7 +432,7 @@ const frontmatter = usePageFrontmatter();
           >
         </I18NRouterLink>
       </div>
-
+<!--
       <div class="col-12 col-md-6 col-xl-3">
         <a
           target="_blank"
@@ -565,6 +567,7 @@ const frontmatter = usePageFrontmatter();
           >
         </a>
       </div>
+      -->
     </div>
   </div>
 </template>
