@@ -6,8 +6,8 @@ import Arweave from 'arweave'
 
 const ANT = 'GZHXzmwuUzvL_TaKUbHpd2w4fsVwuGI6hqs-0Orz7ww'
 const arweave = Arweave.init({ host: 'arweave.net', port: 443, protocol: 'https' })
-const jwk = JSON.parse(fs.readFileSync('../wallet.json', 'utf-8'))
-// const jwk = JSON.parse(Buffer.from(process.env.COOKBOOK, 'base64').toString('utf-8'))
+//const jwk = JSON.parse(fs.readFileSync('../wallet.json', 'utf-8'))
+ const jwk = JSON.parse(Buffer.from(process.env.COOKBOOK, 'base64').toString('utf-8'))
 
 const bundlr = new Bundlr.default('https://node2.bundlr.network', 'arweave', jwk)
 const warp = WarpFactory.custom(

@@ -1,5 +1,6 @@
 wallet.json
 package-lock.json
 node_modules
+deploy-json.mjs
 
 .env
