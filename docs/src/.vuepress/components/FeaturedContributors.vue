@@ -12,7 +12,7 @@ const get_i18n_str = useI18NStr();
       <a
         class="subtext"
         target="_blank"
-        href="https://github.com/Megumiiiiii/docs-megumii/graphs/contributors"
+        href="https://github.com/Megumiiiiii/myQuickNotes/graphs/contributors"
         >{{ get_i18n_str("featured-contributors-action") }}</a
       >
     </div>
@@ -57,7 +57,7 @@ export default {
   },
   mounted() {
     fetch(
-      "https://api.github.com/repos/Megumiiiiii/docs-megumii/contributors?q=contributions&order=desc"
+      "https://api.github.com/repos/Megumiiiiii/myQuickNotes/contributors?q=contributions&order=desc"
     )
       .then((res) => {
         if (res.ok) return res.json();
