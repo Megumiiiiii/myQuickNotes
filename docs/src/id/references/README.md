@@ -1,5 +1,0 @@
----
-locale: id
----
-
-# Referensi
