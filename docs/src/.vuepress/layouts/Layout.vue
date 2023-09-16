@@ -159,18 +159,18 @@ const onBeforeLeave = scrollPromise.pending;
 
     <p class="footer-text">
       <span>{{
-        frontmatter.locale === "es" ? "Creado con " : "Built with "
+        frontmatter.locale === "id" ? "Dibuat dengan " : "Built with "
       }}</span>
-      <span class="heart">&#10084;&#65039;</span>
+      <span class="heart">&#x1f499;&#65039;</span>
       <span>{{
-        frontmatter.locale === "es"
-          ? " por la comunidad de Arweave. Obtén más información en "
+        frontmatter.locale === "id"
+          ? " dari komunitas Arweave. Pelajari lebih lanjut di "
           : " by the Arweave community. Learn more at "
       }}</span>
       <a target="_blank" href="https://arweave.org">Arweave.org</a>
       <div id="header" align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzNmZTIxZmE3ZmY3MzRiMDcwNDJhYTQ5ZmNlY2YxMWE1OWIyYmVkNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/mVBlqOD4ra9jQiI3cC/giphy.gif" height="125" width="420"/>
-  </div>
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzNmZTIxZmE3ZmY3MzRiMDcwNDJhYTQ5ZmNlY2YxMWE1OWIyYmVkNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/mVBlqOD4ra9jQiI3cC/giphy.gif" height="125" width="420"/>
+      </div>
     </p>
   </div>
 </template>

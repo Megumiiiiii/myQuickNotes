@@ -21,7 +21,7 @@
   --c-text-lightest: #5c5c5c;
   --c-bg: #aae4f3;
   --c-bg-light: #aae4f3;
-  --c-bg-dark: rgb(3, 3, 142);
+  --c-bg-dark: #03038e;
   --c-bg-rgb: 242, 242, 242;
 
   --c-accent-peach: #e1c7b8;
@@ -36,8 +36,8 @@
   --c-border-dark: #9da0a3;
 
   --c-card-bg: #e7e7e7;
-  --c-card-hover-bg: #dedede;
-  --c-card-border-color: #cbcbcb;
+  --c-card-hover-bg: #348fff;
+  --c-card-border-color: #0087c1;
   --c-card-shadow-inset: inset 0px 2px 0px rgba(255, 255, 255, 0.5);
 
   --search-border-color: #cfcfcf;
@@ -58,12 +58,12 @@ html.dark {
 
   --c-topbar-bg: #2e2e2e;
 
-  --c-border: #585858;
-  --c-border-dark: #414141;
+  --c-border: #1b1e6d;
+  --c-border-dark: #2a2677;
 
-  --c-card-bg: #353535;
-  --c-card-hover-bg: #414141;
-  --c-card-border-color: rgba(35, 35, 35, 0.5);
+  --c-card-bg: #1b1e6d;
+  --c-card-hover-bg: #2f647b;
+  --c-card-border-color: #30349c;
   --c-card-shadow-inset: inset 0px 1px 0px rgba(225, 199, 184, 0.15);
 }
 
