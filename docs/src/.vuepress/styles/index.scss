@@ -19,15 +19,15 @@
   --c-text-light: #3a3a3a;
   --c-text-lighter: #424242;
   --c-text-lightest: #5c5c5c;
-  --c-bg: #f2f2f2;
-  --c-bg-light: #e0e2e3;
-  --c-bg-dark: #d2d2d4;
+  --c-bg: #c0c6e9;
+  --c-bg-light: #c0c6e9;
+  --c-bg-dark: rgb(3, 3, 142);
   --c-bg-rgb: 242, 242, 242;
 
   --c-accent-peach: #e1c7b8;
   --c-accent-violet: #9555f1;
-  --c-accent-rose: #da7373;
-  --c-accent-sunny: #f6b865;
+  --c-accent-rose: #f972f4;
+  --c-accent-sunny: #e065f6;
   --c-accent-pinky: #e14ca8;
 
   --c-topbar-bg: #dcdcdc;
@@ -48,12 +48,12 @@
 html.dark {
   --c-brand: #ff15dc;
   --c-text: #ffffff;
-  --c-text-light: #ebebeb;
+  --c-text-light: #c0c6e9;
   --c-text-lighter: #ddd;
   --c-text-lightest: #d0d0d0;
-  --c-bg: #242424;
-  --c-bg-light: #323131;
-  --c-bg-dark: #424141;
+  --c-bg: rgb(3, 3, 142);
+  --c-bg-light: rgb(3, 3, 142);
+  --c-bg-dark: rgb(3, 3, 142);
   --c-bg-rgb: 36, 36, 36;
 
   --c-topbar-bg: #2e2e2e;

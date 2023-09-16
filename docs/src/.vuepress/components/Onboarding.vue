@@ -65,7 +65,7 @@ const frontmatter = usePageFrontmatter();
 
       <div class="col-12 col-md-6 col-xl-3">
         <I18NRouterLink
-          to="/getting-started/quick-starts/hw-no-code"
+          to="/getting-started"
           class="onboard-card"
         >
           <div class="card-content">
@@ -163,10 +163,10 @@ const frontmatter = usePageFrontmatter();
             </div>
 
             <h2 class="title">
-              {{ get_i18n_str(frontmatter.locale, "hello-world", "Hello World") }}
+              {{ get_i18n_str(frontmatter.locale, "docz", "docz") }}
             </h2>
             <p class="body-text">
-              {{ get_i18n_str(frontmatter.locale, "hello-world-card-desc") }}
+              {{ get_i18n_str(frontmatter.locale, "docs-desc") }}
             </p>
           </div>
 
@@ -297,7 +297,7 @@ const frontmatter = usePageFrontmatter();
       </div>
 -->
       <div class="col-12 col-md-6 col-xl-3">
-        <I18NRouterLink to="/guides" class="onboard-card">
+        <I18NRouterLink to="/kits" class="onboard-card">
           <div class="card-content">
             <div class="icon-container">
               <div class="icon">
@@ -418,10 +418,10 @@ const frontmatter = usePageFrontmatter();
             </div>
 
             <h2 class="title">
-              {{ get_i18n_str(frontmatter.locale, "guides", "Guides") }}
+              {{ get_i18n_str(frontmatter.locale, "blog", "blog") }}
             </h2>
             <p class="body-text">
-              {{ get_i18n_str(frontmatter.locale, "guides-card-desc") }}
+              {{ get_i18n_str(frontmatter.locale, "blog-desc") }}
             </p>
           </div>
 

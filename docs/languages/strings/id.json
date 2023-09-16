@@ -29,8 +29,15 @@
     
     "documentation": "Dokumentasi",
     
+    "docz": "Docs",
+    "blog": "Blog",
+    "docs-desc": "Daftar guide yang telah dibuat",
+    "blog-desc": "Random blog",
+
     "getting-started": "Mulai dari awal",
     "getting-started-welcome": "Selamat Datang",
+    "sarco": "Sarcophagus",
+    "ar": "AR-io",
     "getting-started-hw-cli": "Hello World (CLI)",
     "getting-started-hw-code": "Hello World (Dengan Kode)",
     "getting-started-hw-node": "Hello World (Nodejs)",

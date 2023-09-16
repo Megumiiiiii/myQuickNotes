@@ -9,11 +9,16 @@ const getI18NSidebar = (langCode) => [
     collapsible: true,
     children: [
       {
-        text: get_i18n_str(langCode, "getting-started-welcome", "Welcome"),
-        link: get_i18n_link(langCode, "/getting-started/welcome"),
+        text: get_i18n_str(langCode, "ar", "AR-io"),
+        link: get_i18n_link(langCode, "/getting-started/ar"),
+      },
+      {
+        text: get_i18n_str(langCode, "sarco", "Sarcophagus"),
+        link: get_i18n_link(langCode, "/getting-started/sarco"),
       },
     ],
   },
+   /*
   {
     text: get_i18n_str(langCode, "concepts"),
     link: get_i18n_link(langCode, "/concepts/"),
@@ -108,9 +113,12 @@ const getI18NSidebar = (langCode) => [
             link: get_i18n_link(langCode, "/concepts/vouch"),
           },
         ],
-      },
-    ],
+      }, CONCEPT
+    ],  CONCEPT
   },
+   */
+
+  /* GUIDES GUIDE GUIDES
   {
     text: get_i18n_str(langCode, "guides"),
     link: get_i18n_link(langCode, "/guides/"),
@@ -284,6 +292,9 @@ const getI18NSidebar = (langCode) => [
       },
     ],
   },
+  */
+
+  /* REFERENSI
   {
     text: get_i18n_str(langCode, "references"),
     link: get_i18n_link(langCode, "/references/"),
@@ -306,6 +317,8 @@ const getI18NSidebar = (langCode) => [
       },
     ],
   },
+  */
+ /* KITS
   {
     text: get_i18n_str(langCode, "kits"),
     link: get_i18n_link(langCode, "/kits/"),
@@ -324,6 +337,12 @@ const getI18NSidebar = (langCode) => [
         link: get_i18n_link(langCode, "/kits/vue/"),
       },
     ],
+  },KITS
+  */
+  {
+    text: get_i18n_str(langCode, "kits"),
+    link: get_i18n_link(langCode, "/kits/"),
+    collapsible: true,
   },
 ];
 
