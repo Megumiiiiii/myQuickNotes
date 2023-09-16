@@ -14,6 +14,7 @@ locale: id
 
 <img align="top" src="https://komarev.com/ghpvc/?username=Megumiiiiii&color=e609e6&style=plastic&label=Visitors" height='35'/>
 
+
 </div>
 
 ---
@@ -42,7 +43,7 @@ Garapan ini perlu domain pribadi seperti .com .net .id etc. Kalian bisa beli di 
   
 ## Install segala keperluan
 ```bash
-  sudo apt update; sudo apt upgrade
+sudo apt update; sudo apt upgrade
 ```
 ```bash
 sudo apt-get update && sudo apt install jq git && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -104,7 +105,7 @@ Untuk mendapatkan Private Key, kalian bisa import Mnemonic nya ke Metamask, lalu
 - SC Sarco: `0x7697B462A7c4Ff5F8b55BDBC2F4076c2aF9cF51A`
 
 ## Register
-```
+```bash
 COMPOSE_PROFILES=register docker compose run register
 ```
 Y, Enter
@@ -117,7 +118,7 @@ Y, Enter
 ## Setelah selesai Register
 
 #### Jalankan Node nya
-```
+```bash
 COMPOSE_PROFILES=service docker compose up -d
 ```
 
@@ -126,14 +127,14 @@ COMPOSE_PROFILES=service docker compose up -d
 ## Command 
 
 ### Cek apakah node nya jalan pa ngga
-```
+```bash
 docker container ls
 ```
 Copy ID dari yang ada service2nya
 - ![image](https://user-images.githubusercontent.com/98658943/214582956-e20e6a96-9bd0-4cfc-9244-9b6a038bf882.png)
 
 Lalu
-```
+```bash
 docker logs -f ContainerIDMu
 ```
 Output yang benar
@@ -141,14 +142,14 @@ Output yang benar
 	
 
 ### Jika ada update di waktu mendatang
-```
+```bash
 cd ~/quickstart-archaeologist
 COMPOSE_PROFILES=service docker compose stop
 COMPOSE_PROFILES=service docker compose pull
 COMPOSE_PROFILES=service docker compose up -d
 ```
 ### Restart Node
-```
+```bash
 COMPOSE_PROFILES=service docker compose stop
 COMPOSE_PROFILES=service docker compose up -d
 ```
@@ -156,37 +157,37 @@ COMPOSE_PROFILES=service docker compose up -d
 ### Jika mengubah domain setelah Resgister
 
 - Update Archaeologist dengan deposit 1 Sacro
-```
+```bash
 docker compose exec -it archaeologist sh
 cli update -f 1
 ```
-```
+```bash
 exit
 ```
 
 - Lalu Restart
-```
+```bash
 COMPOSE_PROFILES=service docker compose restart
 ```
 
 
 ## CLI ( Command Line Interface )
 #### Update Digging Fee ke 300
-```
+```bash
 docker compose exec -it archaeologist sh
 cli update -d 300
 ```
-```
+```bash
 exit
 ```
 300 bisa diubah berapapun
 
 #### Menambah Free Bond 100
-```
+```bash
 docker compose exec -it archaeologist sh
 cli update -f 100
 ```
-```
+```bash
 exit
 ```
 - ![image](https://user-images.githubusercontent.com/98658943/214585483-bd61c8a2-a6bc-41b5-b24f-fe73dd4cf41b.png)
@@ -194,38 +195,33 @@ exit
 100 bisa diubah
 
 #### Cek Profil
-```
+```bash
 docker compose exec -it archaeologist sh
 cli view -p
 ```
-```
+```bash
 exit
 ```
 
 #### Klaim Rewards
-```
+```bash
 docker compose exec -it archaeologist sh
 cli claim
 ```
-```
+```bash
 exit
 ```
 
 #### Withdraw 10 dari Free Bond
-```
+```bash
 docker compose exec -it archaeologist sh
 cli free-bond -w 10
 ```
-```
+```bash
 exit
 ```
 	
 ### Cek Domain
 Masukan domain name kalian kesini https://www.nslookup.io/website-to-ip-lookup . Jika sudah sama dengan IP VPS berarti benar
 
-
 #
-
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzNmZTIxZmE3ZmY3MzRiMDcwNDJhYTQ5ZmNlY2YxMWE1OWIyYmVkNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/mVBlqOD4ra9jQiI3cC/giphy.gif" height="125" width="420"/>
-</div>

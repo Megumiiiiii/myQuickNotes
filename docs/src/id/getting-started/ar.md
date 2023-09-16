@@ -43,11 +43,11 @@ Perlu modal token $AR sedikit, untuk biaya gas fee. $AR bisa beli di binance, at
 
 ## Install Docker dkk
 
-```
+```bash
 sudo apt update; sudo apt upgrade -y
 ```
 
-```
+```bash
 sudo apt-get update && sudo apt install jq git certbot nginx sqlite3 build-essential -y && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 ```
 
@@ -55,7 +55,7 @@ sudo apt-get update && sudo apt install jq git certbot nginx sqlite3 build-essen
 
 #### Nodejs
 
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 16.15.1
@@ -64,7 +64,7 @@ nvm use 16.15.1
 
 #### Yarn
 
-```
+```bash
 curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update -y
@@ -73,26 +73,26 @@ sudo apt-get install yarn -y
 
 ## Open Port
 
-```
+```bash
 sudo ufw allow ssh; sudo ufw allow 80; sudo ufw allow 443; sudo ufw enable
 ```
 
 ## Clone AR Repo
 
-```
+```bash
 git clone https://github.com/ar-io/ar-io-node.git
 cd ~/ar-io-node
 ```
 
 ## Atur `.env`
 
-```
+```bash
 nano .env
 ```
 
 - isi dengan ini, `domainmu.zzz` ganti dengan domainmu, `Password123` ganti dengan passwordmu, bebassss, `Address` ganti dengan wallet addressmu dari [ARConnect](https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap)
 
-```
+```ts
 GRAPHQL_HOST=arweave.net
 GRAPHQL_PORT=443
 START_HEIGHT=1000000
@@ -115,7 +115,7 @@ AR_IO_WALLET=Address
 ## Atur SSL
 
 Ganti `EmailMU@gmail.com` dengan emailmu , seluruh `domainmu.zzz` dengan domain mu
-```
+```bash
 sudo certbot certonly --manual --preferred-challenges dns --email EmailMu@gmail.com -d domainmu.zzz -d '*.domainmu.zzz'
 ```
 
@@ -135,14 +135,14 @@ sudo certbot certonly --manual --preferred-challenges dns --email EmailMu@gmail.
 
 ## Set Nginx
 
-```
+```bash
 rm /etc/nginx/sites-available/default
 nano /etc/nginx/sites-available/default
 ```
 
 - isi dengan ini, ganti seluruh `domainmu.zzz` dengan domain mu
 
-```
+```ts
 # Force redirects from HTTP to HTTPS
 server {
     listen 80;
@@ -177,13 +177,13 @@ server {
 
 #### Cek Nginx
 
-```
+```bash
 sudo nginx -t
 ```
 
 #### Restart nginx dan cek ulang
 
-```
+```bash
 sudo service nginx restart
 sudo nginx -t
 ```
@@ -195,7 +195,7 @@ sudo nginx -t
 
 ## Setup Node
 
-```
+```bash
 cd ~/ar-io-node
 sudo docker compose up -d --build
 ```
@@ -206,7 +206,7 @@ Tunggu sampai selesai...........
 
 - buka ini di browser mu, `IP.VPS.MU` ganti dengan IP VPS MU
 
-```
+```url
 http://IP.VPS.MU:3000/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ
 ```
 
@@ -217,26 +217,26 @@ http://IP.VPS.MU:3000/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ
 
 ### Stop node
 
-```
+```bash
 cd ~/ar-io-node
 sudo docker compose down
 ```
 
 ### Update repo
 
-```
+```bash
 git pull
 ```
 
 ### Update image
 
-```
+```bash
 sudo docker compose pull
 ```
 
 ### Re-build
 
-```
+```bash
 sudo docker compose up -d --build
 ```
 
@@ -254,17 +254,17 @@ sudo docker compose up -d --build
 
 ## Clone Repo Contract
 
-```
+```bash
 cd
 git clone https://github.com/ar-io/testnet-contract.git
 cd ~/testnet-contract
 ```
 
-```
+```bash
 yarn install
 ```
 
-```
+```bash
 yarn build
 ```
 
@@ -279,7 +279,7 @@ yarn build
 
 ## Edit file `join-network.ts`
 
-```
+```bash
 nano tools/join-network.ts
 ```
 
@@ -297,19 +297,19 @@ nano tools/join-network.ts
 
 Uptime
 
-```
+```url
 https://domainmu.zzz/ar-io/healthcheck
 ```
 
 ArDrive
 
-```
+```url
 https://ardrive.domainmu.zzz
 ```
 
 Ya pokoknya cek
 
-```
+```url
 https://domainmu.zzz/UymRNCv22DbIB1KpAtC0qy5oeC1TdGDgoEKWs7J8Y_Q
 ```
 
@@ -317,12 +317,8 @@ https://domainmu.zzz/UymRNCv22DbIB1KpAtC0qy5oeC1TdGDgoEKWs7J8Y_Q
 ## Last....
 
 - Jalankan command ini
-```
+```bash
 yarn ts-node tools/join-network.ts
 ```
 
 #
-
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzNmZTIxZmE3ZmY3MzRiMDcwNDJhYTQ5ZmNlY2YxMWE1OWIyYmVkNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/mVBlqOD4ra9jQiI3cC/giphy.gif" height="125" width="420"/>
-</div>

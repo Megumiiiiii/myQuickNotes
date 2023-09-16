@@ -340,7 +340,7 @@ const getI18NSidebar = (langCode) => [
   },KITS
   */
   {
-    text: get_i18n_str(langCode, "kits"),
+    text: get_i18n_str(langCode, "blog"),
     link: get_i18n_link(langCode, "/kits/"),
     collapsible: true,
   },
