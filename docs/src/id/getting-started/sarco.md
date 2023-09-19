@@ -224,4 +224,12 @@ exit
 ### Cek Domain
 Masukan domain name kalian kesini https://www.nslookup.io/website-to-ip-lookup . Jika sudah sama dengan IP VPS berarti benar
 
+## ⚠️ Jika ingin menghapus node ⚠️
+
+```bash
+cd ~/quickstart-archaeologist
+COMPOSE_PROFILES=service docker compose down -v
+docker rmi jwilder/nginx-proxy nginxproxy/acme-companion ghcr.io/sarcophagus-org/sarcophagus-v2-archaeologist-service
+```
+
 #

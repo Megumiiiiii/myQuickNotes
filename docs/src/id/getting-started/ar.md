@@ -321,4 +321,12 @@ https://domainmu.zzz/UymRNCv22DbIB1KpAtC0qy5oeC1TdGDgoEKWs7J8Y_Q
 yarn ts-node tools/join-network.ts
 ```
 
+## ⚠️ Jika ingin menghapus node ⚠️
+
+```bash
+cd ~/ar-io-node
+docker compose down -v
+docker rmi ghcr.io/ar-io/ar-io-core ghcr.io/ar-io/ar-io-envoy
+```
+
 #

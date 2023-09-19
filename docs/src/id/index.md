@@ -7,3 +7,4 @@ onboarding: true
 
 - [AR](getting-started/ar.md)
 - [Sarcophagus](getting-started/sarco.md)
+- [CESS](id/getting-started/cess.md)
