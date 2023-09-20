@@ -27,7 +27,7 @@ const result = await bundlr.uploadFolder('./src/.vuepress/dist', {
 
 await contract.writeInteraction({
   function: 'setRecord',
-  subDomain: '@',
+  subDomain: 'link',
   transactionId: result.id
 })
 
