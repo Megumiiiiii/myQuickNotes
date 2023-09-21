@@ -3,8 +3,8 @@ import { WarpFactory, defaultCacheOptions } from 'warp-contracts'
 import fs from 'fs'
 import Arweave from 'arweave'
 
-// // THIS IS elysianscriptarium
-const ANT = 'WufH5bUN0PHsFKZ4VPcrPpMIXGnovStQ3TytjSwyDgY'
+// // THIS IS myquicknotes
+const ANT = 'GZHXzmwuUzvL_TaKUbHpd2w4fsVwuGI6hqs-0Orz7ww'
 const arweave = Arweave.init({ host: 'arweave.net', port: 443, protocol: 'https' })
 //const jwk = JSON.parse(fs.readFileSync('../wallet.json', 'utf-8'))
  const jwk = JSON.parse(Buffer.from(process.env.COOKBOOK, 'base64').toString('utf-8'))
