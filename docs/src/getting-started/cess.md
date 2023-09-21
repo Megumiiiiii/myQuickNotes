@@ -4,7 +4,9 @@
 
 <div align="center">
 
-# Sarcophagus
+# CESS
+
+[![Twitter](https://img.shields.io/twitter/follow/megumii?style=social)](https://twitter.com/megumii_tez)
 
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23e609e6)](https://github.com/sponsors/Megumiiiiii)
 
@@ -19,6 +21,4 @@
 
 # UNDER DEVELOPMENT
 
-## Indonesian
-
-- [Sarcophagus](id/getting-started/cess.md)
+## Please switch to Bahasa
