@@ -71,7 +71,7 @@ export default {
   },
 
   theme: defaultTheme({
-    repo: "https://github.com/twilson63/permaweb-cookbook",
+    repo: "https://github.com/Megumiiiiii/myQuickNotes/",
     editLink: true,
     editLinkPattern: ":repo/edit/:branch/docs/src/:path",
     // layouts: {
